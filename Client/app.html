@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bangalore Home Price Prediction</title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏠 Bangalore Home Price Predictor</h1>
+
+    <div class="input-group">
+      <label for="sqft">Total Square Feet</label>
+      <input type="text" id="sqft" placeholder="Ex: 1200" />
+    </div>
+
+    <div class="input-group">
+      <label for="bhk">Number of Bedrooms (BHK)</label>
+      <input type="text" id="bhk" placeholder="Ex: 2" />
+    </div>
+
+    <div class="input-group">
+      <label for="bath">Number of Bathrooms</label>
+      <input type="text" id="bath" placeholder="Ex: 2" />
+    </div>
+
+    <div class="input-group">
+      <label for="location">Select Location</label>
+      <select id="location">
+        <option>Loading locations...</option>
+      </select>
+    </div>
+
+    <button onclick="onClickedEstimatePrice()">Estimate Price</button>
+
+    <div id="estimated_price">Estimated Price: ₹ --</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
