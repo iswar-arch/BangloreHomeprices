@@ -1,6 +1,6 @@
  async function onPageLoad() {
       const locationDropdown = document.getElementById("location");
-      const response = await fetch("http://127.0.0.1:5000/get_location_names");
+      const response = await fetch("https://banglorehomeprices.onrender.com/get_location_names");
       const data = await response.json();
       locationDropdown.innerHTML = "";
 
@@ -24,7 +24,7 @@
       formData.append("bath", bath);
       formData.append("location", location);
 
-      const response = await fetch("http://127.0.0.1:5000/predict_home_price", {
+      const response = await fetch("https://banglorehomeprices.onrender.com/predict_home_price", {
         method: "POST",
         body: formData,
       });

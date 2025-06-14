@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bangalore House Price Prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🏠 BHP Predictor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#locations">Locations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonialCarousel">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#predict">Predict Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Bangalore House Price Predictor</h1>
+      <p class="lead">Get accurate predictions based on location, size, and features.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">About This Project</h2>
+        <p class="lead">Built using advanced machine learning models, this platform helps you estimate real estate
+          prices across Bangalore accurately and effortlessly.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="fas fa-brain"></i>
+            <div>
+              <h3>AI-Powered Insights</h3>
+              <p>We use real data and machine learning to estimate property prices precisely.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="fas fa-map-marked-alt"></i>
+            <div>
+              <h3>Location-Specific Analysis</h3>
+              <p>Get prices based on real trends from over 100+ locations in Bangalore.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="fas fa-gauge-high"></i>
+            <div>
+              <h3>Fast & User Friendly</h3>
+              <p>Responsive and lightweight interface delivers instant predictions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / Benefits Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Features & Benefits</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="benefit-icon mb-2">📊</div>
+          <h5>Accurate Predictions</h5>
+          <p>Powered by real data and tested machine learning models.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-icon mb-2">📍</div>
+          <h5>Location-Based Insights</h5>
+          <p>Find out how prices vary across Bangalore's diverse localities.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-icon mb-2">⚡</div>
+          <h5>Fast & User-Friendly</h5>
+          <p>Instant results on a clean and intuitive interface.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Insights Section -->
+  <section class="py-5 bg-light" id="locations">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Top Locations in Bangalore</h2>
+
+      <!-- Search Bar -->
+      <div class="mb-4 text-center">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search for a location...">
+      </div>
+
+      <div class="row" id="locationContainer">
+        <!-- Location cards will be injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Prediction Redirect Section -->
+  <section id="predict" class="py-5 prediction-section text-center text-white"
+    style="background: linear-gradient(to right, #0d6efd, #0a58ca);">
+    <div class="container">
+      <h2 class="fw-bold display-6 mb-3">Start Your Price Prediction Journey</h2>
+      <p class="lead mb-4">Discover the potential value of your dream home in just a few clicks. Accurate. Fast. Free.
+      </p>
+      <a href="Client/app.html" target="_blank" class="btn btn-light btn-lg px-4 py-2 fw-semibold shadow">
+        <i class="fas fa-magic me-2"></i>Launch Prediction Tool
+      </a>
+      <div class="mt-3 small text-light">
+        * Powered by machine learning | Instant estimation | No sign-up required
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials Section -->
+  <section class="testimonial-section py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">What Our Users Say</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Testimonial 1 -->
+          <div class="carousel-item active">
+            <div class="card mx-auto shadow-sm p-4" style="max-width: 600px;">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="rounded-circle me-3"
+                  width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Ananya Sharma</h5>
+                  <small class="text-muted">Koramangala, Bangalore</small>
+                  <div class="text-warning mt-1">★★★★★</div>
+                </div>
+              </div>
+              <p class="mb-0">"This tool helped me estimate the value of my new apartment before making an offer. The
+                predictions were spot-on and the interface is amazing!"</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm p-4" style="max-width: 600px;">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="User" class="rounded-circle me-3"
+                  width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Rahul Mehta</h5>
+                  <small class="text-muted">Whitefield, Bangalore</small>
+                  <div class="text-warning mt-1">★★★★☆</div>
+                </div>
+              </div>
+              <p class="mb-0">"User-friendly and spot-on predictions. Helped me shortlist properties within my budget in
+                no time."</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm p-4" style="max-width: 600px;">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="User" class="rounded-circle me-3"
+                  width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Karan Singh</h5>
+                  <small class="text-muted">HSR Layout, Bangalore</small>
+                  <div class="text-warning mt-1">★★★★★</div>
+                </div>
+              </div>
+              <p class="mb-0">"Super useful for investors and first-time buyers. I used it multiple times while house
+                hunting. Highly recommend!"</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm p-4" style="max-width: 600px;">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User" class="rounded-circle me-3"
+                  width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Neha Reddy</h5>
+                  <small class="text-muted">Indiranagar, Bangalore</small>
+                  <div class="text-warning mt-1">★★★★★</div>
+                </div>
+              </div>
+              <p class="mb-0">"Loved the experience. It gave me clear insights into areas I was unsure about."</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm p-4" style="max-width: 600px;">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User" class="rounded-circle me-3"
+                  width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Vikram Rao</h5>
+                  <small class="text-muted">Bannerghatta Road</small>
+                  <div class="text-warning mt-1">★★★★☆</div>
+                </div>
+              </div>
+              <p class="mb-0">"Easy to use and highly informative. The location insights are a big plus."</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm p-4" style="max-width: 600px;">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="User" class="rounded-circle me-3"
+                  width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Divya Joshi</h5>
+                  <small class="text-muted">Marathahalli, Bangalore</small>
+                  <div class="text-warning mt-1">★★★★★</div>
+                </div>
+              </div>
+              <p class="mb-0">"Intuitive and helpful. Made my property decision a lot easier."</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 7 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm p-4" style="max-width: 600px;">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="User" class="rounded-circle me-3"
+                  width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Suresh Patil</h5>
+                  <small class="text-muted">Electronic City</small>
+                  <div class="text-warning mt-1">★★★☆☆</div>
+                </div>
+              </div>
+              <p class="mb-0">"Some predictions felt off, but overall a great starting point for research."</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 8 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm p-4" style="max-width: 600px;">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="User" class="rounded-circle me-3"
+                  width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Priya Nair</h5>
+                  <small class="text-muted">Bellandur, Bangalore</small>
+                  <div class="text-warning mt-1">★★★★★</div>
+                </div>
+              </div>
+              <p class="mb-0">"Accurate price estimation and a beautiful interface. Would recommend to everyone!"</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 9 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm p-4" style="max-width: 600px;">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="User" class="rounded-circle me-3"
+                  width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Arjun Pillai</h5>
+                  <small class="text-muted">Jayanagar, Bangalore</small>
+                  <div class="text-warning mt-1">★★★★☆</div>
+                </div>
+              </div>
+              <p class="mb-0">"Insightful tool! It narrowed down my options quickly and saved a lot of time."</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 10 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm p-4" style="max-width: 600px;">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="User" class="rounded-circle me-3"
+                  width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Sneha Kapoor</h5>
+                  <small class="text-muted">Hebbal, Bangalore</small>
+                  <div class="text-warning mt-1">★★★★★</div>
+                </div>
+              </div>
+              <p class="mb-0">"Brilliant for first-time buyers. The UI is slick and data is reliable."</p>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!-- Carousel Dots: Separated from the card -->
+        <div class="carousel-dots mt-4 text-center">
+          <div class="carousel-indicators position-static">
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="4"
+              aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="5"
+              aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="6"
+              aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="7"
+              aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="8"
+              aria-label="Slide 9"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="9"
+              aria-label="Slide 10"></button>
+          </div>
+        </div>
+
+
+      </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <h5 class="fw-bold">Bangalore House Price Predictor</h5>
+          <p class="mb-0 small">© 2025 All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-1 small">Contact:
+            <a href="mailto:info@bangaloreprice.ai"
+              class="text-white text-decoration-underline">info@bangaloreprice.ai</a>
+          </p>
+          <div>
+            <a href="#" class="text-white me-3" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/iswar-kumar-sahoo-144b11235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank" class="text-white" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
